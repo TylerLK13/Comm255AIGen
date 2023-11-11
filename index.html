@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Haven</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 2em;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            color: #4CAF50;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6em;
+            color: #555;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Potato Haven</h1>
+        <p>Your one-stop shop for quality potatoes!</p>
+    </header>
+
+    <section>
+        <div>
+            <h2>Our Potatoes</h2>
+            <p>Embark on a culinary adventure with Potato Haven's exquisite selection of premium potatoes. Sourced from the finest fields and cultivated with care, our potatoes are the heart and soul of your favorite dishes.</p>
+        </div>
+
+        <div>
+            <img src="russet_gold.jpg" alt="Russet Gold Potato">
+            <p><strong>Russet Gold:</strong> Discover the classic allure of our Russet Gold potatoes. With their earthy flavor and fluffy texture, they're perfect for baking, mashing, or frying.</p>
+        </div>
+
+        <div>
+            <img src="creamy_red_bliss.jpg" alt="Creamy Red Bliss Potato">
+            <p><strong>Creamy Red Bliss:</strong> Elevate your culinary creations with the Creamy Red Bliss potatoes. Known for their creamy texture and thin red skin, these beauties are ideal for salads, roasting, or boiling.</p>
+        </div>
+
+        <div>
+            <img src="fingerling_medley.jpg" alt="Fingerling Medley Potatoes">
+            <p><strong>Fingerling Medley:</strong> Immerse yourself in the world of flavors with our Fingerling Medley. These petite, finger-shaped potatoes come in a variety of colors, including red, purple, and gold.</p>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>About Us</h2>
+            <p>Welcome to Potato Haven, where our love for potatoes meets your delight in every bite! Founded in 2020 by a group of passionate potato enthusiasts, our mission is to provide the finest and freshest potatoes to potato lovers around the world.</p>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>Contact</h2>
+            <p>Have questions or want to place an order? Reach out to us using the form below.</p>
+            <form action="submit_form.php" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <h2>Potato Guessing Game</h2>
+        <p>Can you guess the number of potatoes in the sack?</p>
+    
+        <div id="game-container">
+            <img src="potato_sack.jpg" alt="Potato Sack">
+            <label for="guess">Your Guess:</label>
+            <input type="number" id="guess" placeholder="Enter your guess" min="0">
+            <button onclick="checkGuess()">Check Guess</button>
+            <p id="result"></p>
+        </div>
+    
+        <script>
+            function checkGuess() {
+                const userGuess = document.getElementById('guess').value;
+                const correctAnswer = 42; // Change this to the actual number of potatoes
+    
+                if (userGuess === "") {
+                    document.getElementById('result').innerText = "Please enter a guess.";
+                } else {
+                    if (parseInt(userGuess) === correctAnswer) {
+                        document.getElementById('result').innerText = "Congratulations! You guessed it right!";
+                    } else {
+                        document.getElementById('result').innerText = "Sorry, that's not the correct number. Try again!";
+                    }
+                }
+            }
+        </script>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Potato Haven. All rights reserved.</p>
+    </footer>
+</body>
+</html>
