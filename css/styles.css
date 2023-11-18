@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background: url('../images/AIOcean.jpg') center/cover;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: background-position 0.5s ease; /* Add a transition effect */
+}
+
+nav {
+    display: flex;
+    background-color: #444;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+section {
+    padding: 20px;
+    background-color: #f8f8f8; /* Set background color */
+    border-radius: 8px; /* Add border radius for a subtle rounded appearance */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    margin: 20px; /* Add margin for separation from other elements */
+}
+
+div image {
+    size: 300px;
+}
+
+.news-section {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 15px; /* Add padding to space out the sections */
+
+}
+
+.news-section img {
+    max-width: 400px; /* Adjust this value as needed */
+    height: auto;
+    margin-right: 20px; /* Add space to the right of the image */
+    border-radius: 8px; /* Optional: Add border radius for a more rounded appearance */
+}
+
+.news-section div {
+    flex: 1; /* Allow the title and description to take up remaining space */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
