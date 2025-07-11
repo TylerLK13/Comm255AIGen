@@ -2,7 +2,7 @@
 
 Hi.
 
-This code was an experiment/class project of mine to see how well AI, specifically ChatGPT, can create a simple news website on its own. 
+This code was an experiment/class project of mine to see how well AI, specifically ChatGPT, can create a simple news website entirely on its own. I concluded that it could not as I would need to constantly adjust code. Although, I was surprised at how little I had to do so.
 
 HOW TO VIEW THE WEBSITE LOCALLY:
 
